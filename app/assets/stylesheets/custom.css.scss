@@ -1,0 +1,40 @@
+@import 'bootstrap/dist/css/bootstrap';
+$color: #0c343d;
+$color-pale: #0c343d80;
+
+.navbar {
+  background: $color;
+}
+
+.navbar-brand {
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+.jumbotron {
+  background-image: asset-url('img1');
+  background-size: contain;
+  background-position: center center;
+  margin-top: 32px;
+  height: 480px;
+}
+
+.btn.btn-primary,
+.btn.btn-primary:active:focus {
+  background: $color;
+}
+
+.footer a {
+  color: $color-pale;
+  display: inline-block;
+  text-decoration: none;
+  padding: 16px;
+}
+
+.footer a:first-of-type {
+  margin-left: -32px;
+}
+
+.footer a:hover {
+  color: $color;
+}
