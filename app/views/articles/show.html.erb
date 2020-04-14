@@ -1,7 +1,19 @@
-<h1>Showing article details </h1>
-<p>Title: <%= @article.title %></p>
-<p>Description: <%= @article.description %></p>
+<div class="container articles-container">
+  <h2 class="heading"><%= @article.title %></h1>
+    <div class="card card-single shadow rounded">
+      <div class="card-body">
+        <div class="card-text"><%= simple_format(@article.description) %></div>
+        <%= link_to 'Edit', edit_article_path(@article), class: "btn btn-info" %>
+        <%= link_to 'Delete', article_path(@article), method: :delete, data: { confirm: 'Are you sure?' }, class: "btn btn-danger" %>
+      </div>
+      <div class="card-footer text-muted">
+        Created <%= time_ago_in_words(@article.created_at) %> ago, edited <%= time_ago_in_words(@article.updated_at) %> ago
+      </div>
+    </div>
+ 
+ 
+ 
+  
 
-<%= link_to 'Edit', edit_article_path(@article) %>
-<%= link_to 'Delete', article_path(@article), method: :delete, data: { confirm: 'Are you sure?' } %>
-<%= link_to 'List of articles', articles_path %>
+  <%= link_to 'Create new article', new_article_path, class: "btn btn-primary" %>
+</div>

@@ -1,4 +1,17 @@
-<h1>About page</h1>
-
-<%= link_to 'List of articles', articles_path %> |
-<%= link_to 'Home page', root_path %>
+<div class="container container-about">
+  <h2 class="heading">About</h2>
+  <div class="shadow rounded p-5 row">
+    <div class="col about-description">
+    <h3>Lorem Ipsum</h3> 
+    <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. 
+    Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, 
+    when an unknown printer took a galley of type and scrambled it to make a type 
+    specimen book. It has survived not only five centuries, but also the leap into  
+    typesetting, remaining essentially unchanged. It was popularised in the 1960s with  
+    the release of Letraset sheets containing Lorem Ipsum passages, and more recently  
+    with desktop publishing software like Aldus PageMaker including versions of Lorem  
+    Ipsum.</p>
+    </div>
+    <%= image_tag("img2.jpg", :alt => "kredki", class: "img row") %>
+  </div>
+</div>

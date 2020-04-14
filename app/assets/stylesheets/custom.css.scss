@@ -38,3 +38,123 @@ $color-pale: #0c343d80;
 .footer a:hover {
   color: $color;
 }
+
+.heading {
+  font-size: 40px;
+  margin-bottom: 64px;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.card {
+  display: inline-block;
+  margin: 0 0 64px;
+  padding: 16px 32px;
+  width: calc(50% - 32px);
+}
+
+.card:nth-child(even) {
+  margin-right: 32px; 
+}
+
+.articles-container, .edit-container, .container-about {
+  padding: 64px 0 32px;
+}
+
+.article-heading {
+  color: $color;
+  display: block;
+  margin-bottom: 24px;
+  text-transform: capitalize;
+}
+
+.article-heading:hover {
+  color: $color;
+  text-decoration: none;
+}
+
+.card p {
+  font-size: 20px;
+  line-height: 1.35;
+  margin-bottom: 24px;
+}
+
+.card p::first-letter {
+  text-transform: capitalize;
+}
+
+.card-footer {
+  background: #fff;
+}
+
+.form {
+  margin: 0 auto 32px;
+  max-width: 640px;
+}
+
+.form input, .form textarea {
+  margin: 0 0 32px;
+}
+
+.form-control, .row {
+  box-sizing: border-box;
+  margin: auto 0;
+}
+
+.alert {
+  margin: 0 auto 64px;
+  max-width: 640px;
+  padding: 16px 32px 16px 16px;
+}
+
+.alert-heading {
+  font-size: 1.25em;
+}
+
+.card-single {
+  display: block;
+  margin: 0 auto 64px;
+  width: 60%;
+}
+
+.card-single:nth-child(even) {
+  margin: 0 auto 64px;
+} 
+
+.about-description {
+  padding: 32px;
+  width: calc(45% - 64px);
+}
+
+.about-description h3 {
+  color: $color;
+  margin-bottom: 24px;
+}
+
+.img {
+  width: 50%;
+}
+
+@media screen and (max-width: 1000px) {
+  .card, .card-single {
+    width: 100%;
+  }
+
+  .heading {
+    text-align: center;
+  }
+
+  .about-description {
+    min-width: 100%;
+  }
+  
+  img {
+    min-width: 100%;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .about-description {
+    padding: 16px;
+  }
+}

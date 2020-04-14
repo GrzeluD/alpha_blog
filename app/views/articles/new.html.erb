@@ -1,5 +1,8 @@
-<h1>Create a new Article</h1>
+<div class="container edit-container">
+  <h2 class="heading">Create a new Article</h1>
 
-<%= render 'form' %>
-
-<%= link_to 'List of articles', articles_path %>
+  <%= render 'form' %>
+  <div>
+    <%= link_to 'Return to articles', articles_path, class: "btn btn-primary btn-bottom" %>
+  </div>
+</div>
