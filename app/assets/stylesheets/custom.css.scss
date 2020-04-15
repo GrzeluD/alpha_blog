@@ -73,6 +73,12 @@ $color-pale: #0c343d80;
   text-decoration: none;
 }
 
+.card-header {
+  background: #fff;
+  color: $color;
+  text-align: center;
+}
+
 .card p {
   font-size: 20px;
   line-height: 1.35;

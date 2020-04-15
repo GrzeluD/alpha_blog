@@ -2,6 +2,9 @@
   <h2 class="heading">All articles</h1>
   <% @articles.each do |article| %>
     <div class="card shadow rounded">
+      <div class="card-header font-italic">
+        by <%= article.user.username if article.user %>
+      </div>
       <div class="card-body">
         <h3 class="card-title"><%= link_to article.title, article_path(article), class: "article-heading" %></h3>
         <p class="card-text"><%= truncate(article.description, lenght: 100) %></p>
