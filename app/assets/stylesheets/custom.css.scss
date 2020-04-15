@@ -141,6 +141,20 @@ $color-pale: #0c343d80;
   width: 50%;
 }
 
+.user-heading {
+  margin-bottom: 32px;
+}
+
+.img-thumbnail {
+  max-width: 480px;
+  min-width: auto;
+  margin-bottom: 32px;;
+}
+
+.user-heading-second {
+  margin-bottom: 64px;
+}
+
 @media screen and (max-width: 1000px) {
   .card, .card-single {
     width: 100%;

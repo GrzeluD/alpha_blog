@@ -1,0 +1,10 @@
+<div class="container edit-container">
+  <h2 class="heading user-heading"><%= @user.username %>'s profile</h2>
+  <%= gravatar_for @user, size: 200 %>
+  <h3 class="user-heading-second text-center">Articles</h3>
+
+  <%= render 'articles/article' %>
+  <div>
+    <%= link_to 'Return to articles', articles_path, class: "btn btn-primary btn-bottom" %>
+  </div>
+</div>
