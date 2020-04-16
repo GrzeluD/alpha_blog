@@ -1,7 +1,12 @@
 <div class="container articles-container">
   <h2 class="heading">All articles</h1>
-
-  <%= render 'article' %>  
+  <div class="apple_pagination mb-4">
+    <%= will_paginate @articles, :container => false %>
+  </div>
+  <%= render 'article' %> 
+  <div class="apple_pagination mb-4">
+    <%= will_paginate @articles, :container => false %>
+  </div> 
   <div>
     <%= link_to 'Create new article', new_article_path, class: "btn btn-primary" %>
   </div>

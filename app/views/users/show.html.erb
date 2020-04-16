@@ -1,9 +1,17 @@
 <div class="container edit-container">
   <h2 class="heading user-heading"><%= @user.username %>'s profile</h2>
   <%= gravatar_for @user, size: 200 %>
+  <div class="text-center mb-5">
+    <%= link_to 'Edit profile', edit_user_path(@user), class: "btn btn-info" %>
+  </div>
   <h3 class="user-heading-second text-center">Articles</h3>
-
+  <div class="apple_pagination mb-4">
+    <%= will_paginate @articles, :container => false %>
+  </div> 
   <%= render 'articles/article' %>
+  <div class="apple_pagination mb-4">
+    <%= will_paginate @articles, :container => false %>
+  </div> 
   <div>
     <%= link_to 'Return to articles', articles_path, class: "btn btn-primary btn-bottom" %>
   </div>

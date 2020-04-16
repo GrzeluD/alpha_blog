@@ -1,7 +1,10 @@
+<div>  
   <% @articles.each do |article| %>
     <div class="card shadow rounded">
       <div class="card-header font-italic">
-        by <%= article.user.username if article.user %>
+      <% if article.user %>
+        by <%= link_to article.user.username, user_path(article.user) %>
+      <% end%>
       </div>
       <div class="card-body">
         <h3 class="card-title"><%= link_to article.title, article_path(article), class: "article-heading" %></h3>
@@ -15,3 +18,4 @@
       </div>
     </div>
   <% end %>
+</div>
