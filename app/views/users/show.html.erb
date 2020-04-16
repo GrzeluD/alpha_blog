@@ -2,7 +2,9 @@
   <h2 class="heading user-heading"><%= @user.username %>'s profile</h2>
   <%= gravatar_for @user, size: 200 %>
   <div class="text-center mb-5">
-    <%= link_to 'Edit profile', edit_user_path(@user), class: "btn btn-info" %>
+    <% if logged_in? && current_user == @user %>
+      <%= link_to 'Edit profile', edit_user_path(@user), class: "btn btn-info" %>
+    <% end %>
   </div>
   <h3 class="user-heading-second text-center">Articles</h3>
   <div class="apple_pagination mb-4">
