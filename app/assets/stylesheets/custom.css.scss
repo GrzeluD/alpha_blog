@@ -190,6 +190,29 @@ $color-pale: #0c343d80;
   color: $color; 
 }
 
+.listing {
+  margin: 0 auto;
+  max-width: 480px;
+}
+
+.listing li {
+  list-style: none;
+  margin-bottom: 32px;
+}
+
+.listing li a {
+  background: $color;
+  color: #fff;
+  display: block;
+  font-size: 26px;
+  padding: 16px 32px;
+  text-align: center;
+}
+
+.listing li a:hover {
+  text-decoration: none
+}
+
 @media screen and (max-width: 1000px) {
   .card, .card-single {
     width: 100%;
