@@ -1,6 +1,9 @@
 <div class="container edit-container">
   <h2 class="heading">Alpha Categories</h1>
   <div>
+    <div class="apple_pagination mb-4">
+      <%= will_paginate @categories, :container => false %>
+    </div>
     <% @categories.each do |category| %>
       <ul class="listing">
         <li>
@@ -8,5 +11,8 @@
         </li>
       </ul>
     <% end %>
+    <div class="apple_pagination mb-4">
+      <%= will_paginate @categories, :container => false %>
+    </div>
   </div> 
 </div>
