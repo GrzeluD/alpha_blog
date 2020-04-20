@@ -7,6 +7,11 @@
       </div>
       <div class="card-body">
         <div class="card-text"><%= simple_format(@article.description) %></div>
+        <div class="categories-list">
+        <% if @article.categories.any? %>
+          <p>Categories: &nbsp; <%= render @article.categories %></p>
+        <% end %>
+        </div>
         <% if logged_in? && (current_user == @article.user || current_user.admin?) %>
           <%= link_to 'Edit', edit_article_path(@article), class: "btn btn-info" %>
           <%= link_to 'Delete', article_path(@article), method: :delete, data: { confirm: 'Are you sure?' }, class: "btn btn-danger" %>

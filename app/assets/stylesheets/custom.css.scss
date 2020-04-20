@@ -213,6 +213,23 @@ $color-pale: #0c343d80;
   text-decoration: none
 }
 
+.category-checkbox-group label {
+  margin-right: 16px;
+}
+
+.category-checkbox-group input {
+  margin-right: 4px;
+  position: inherit;
+}
+
+.card .categories-list p {
+  font-size: 13px;
+}
+
+.card .categories-list a {
+  color: $color;
+}
+
 @media screen and (max-width: 1000px) {
   .card, .card-single {
     width: 100%;

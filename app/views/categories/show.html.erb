@@ -1,0 +1,17 @@
+<div class="container edit-container">
+  <h2 class="heading"><%= "Category: #{@category.name}" %></h2>
+
+  <div class="apple_pagination mb-4">
+    <%= will_paginate @category_articles, :container => false %>
+  </div>
+  
+  <%= render 'articles/article', obj: @category_articles %> 
+
+  <div class="apple_pagination mb-4">
+    <%= will_paginate @category_articles, :container => false %>
+  </div>
+
+  <div>
+    <%= link_to 'Return to categories', categories_path, class: "btn btn-primary btn-bottom" %>
+  </div>
+</div>
