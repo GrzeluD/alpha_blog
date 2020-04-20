@@ -196,12 +196,14 @@ $color-pale: #0c343d80;
 }
 
 .listing li {
+  background: $color;
+  color: #fff;
   list-style: none;
   margin-bottom: 32px;
+  padding-bottom: 8px;
 }
 
 .listing li a {
-  background: $color;
   color: #fff;
   display: block;
   font-size: 26px;
